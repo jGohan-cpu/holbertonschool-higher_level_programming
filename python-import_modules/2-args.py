@@ -1,17 +1,18 @@
-#!/usr/bin/python3
-# 2-args.py
-# Brennan D Baraban <375@holbertonschool.com>
+#!/usr/bin/env python3
 
-if __name__ == "__main__":
-    """Print the number of and list of arguments."""
-    import sys
+import sys
 
-    count = len(sys.argv) - 1
-    if count == 0:
+if __name__ == '__main__':
+    # Exclude the script name itself from the arguments
+    arguments = sys.argv[1:]
+    num_arguments = len(arguments)
+
+    if num_arguments == 0:
         print("0 arguments.")
-    elif count == 1:
+    elif num_arguments == 1:
         print("1 argument:")
+        print("1:", arguments[0])
     else:
-        print("{} arguments:".format(count))
-    for i in range(count):
-        print("{}: {}".format(i + 1, sys.argv[i + 1]))
+        print(num_arguments, "arguments:")
+        for i, argument in enumerate(arguments, start=1):
+            print(i, ":", argument)
