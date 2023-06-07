@@ -1,15 +1,14 @@
 #!/usr/bin/python3
+
 import sys
 
-# Get the arguments passed to the program
-arguments = sys.argv[1:]
+if __name__ == "__main__":
 
-# Initialize the variable to hold the sum
-sum_of_arguments = 0
+    args = sys.argv[1:]
 
-# Iterate over each argument and add it to the sum
-for arg in arguments:
-    sum_of_arguments += int(arg)
+    num = []
+    for i in args:
+        num.append(int(i))
 
-# Print the sum
-print(sum_of_arguments)
+    total = sum(num)
+    print(total, end="\n")
