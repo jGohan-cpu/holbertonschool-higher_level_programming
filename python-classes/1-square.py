@@ -6,7 +6,7 @@ This class Square holds a private instance
 
 class Square:
     """
-    ttt
+    Special private attribute
     """
 
     def __init__(cons, size):
