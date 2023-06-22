@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 '''
-function that returns the 
-number of characters
+function that writes a string 
+to a text fiel returns 
+the number of characters
 '''
 
 
