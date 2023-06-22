@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-import json
 '''
 function takes a JSON
 string and returns the
 data structure
 '''
+import json
 
 
 def from_json_string(my_str):
