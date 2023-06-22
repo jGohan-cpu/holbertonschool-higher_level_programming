@@ -8,10 +8,12 @@ of characters
 
 def append_write(filename="", text=""):
     '''
-    Appends the given text string to a file and returns the number of characters added.
+    Appends the given text string to a file and
+    returns the number of characters added.
 
     Args:
-        filename (str): The name of the file to which the text will be appended.
+        filename (str): The name of the file to which
+        the text will be appended.
         text (str): The string to be appended to the file.
 
     Returns:
