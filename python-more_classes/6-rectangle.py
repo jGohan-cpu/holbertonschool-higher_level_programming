@@ -97,4 +97,4 @@ class Rectangle:
         deletes rectangle
         """
         print("Bye rectangle...")
-        Rectangle.num_of_instances += 1
+        Rectangle.num_of_instances -= 1
