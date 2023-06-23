@@ -6,20 +6,19 @@ This module defines a class Rectangle
 
 class Rectangle:
     """
-    This class defines a Rectangle with width and height attributes.
+    This class defines a Rectangle
     """
 
-    # Public class attribute
-    num_of_instances = 0
+    # Public class attribute initialized to 0
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """
-        Initializes instance of Rectangle. Width and height are
-        optional and default to 0.
+        Initializes instance of Rectangle.
         """
         self.width = width
         self.height = height
-        Rectangle.num_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -32,9 +31,6 @@ class Rectangle:
     def width(self, value):
         """
         Sets the width of the Rectangle.
-        Raises:
-            TypeError: If width is not an integer.
-            ValueError: If width is less than 0.
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -53,9 +49,6 @@ class Rectangle:
     def height(self, value):
         """
         Sets the height of the Rectangle.
-        Raises:
-            TypeError: If height is not an integer.
-            ValueError: If height is less than 0.
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -71,7 +64,6 @@ class Rectangle:
 
     def perimeter(self):
         """
-        Returns the perimeter of the Rectangle.
         Returns 0 if width or height is 0.
         """
         if self.__width == 0 or self.__height == 0:
@@ -88,13 +80,13 @@ class Rectangle:
 
     def __repr__(self):
         """
-        return string representation
+        Returns a string
         """
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
         """
-        deletes rectangle
+        Prints a message when an instance of Rectangle is deleted.
         """
         print("Bye rectangle...")
-        Rectangle.num_of_instances -= 1
+        Rectangle.number_of_instances -= 1
