@@ -76,12 +76,8 @@ class Rectangle:
 
     def __str__(self):
         """
-        prints rectangle with the caracter '#'
+        Returns a string
         """
-        if self.width == 0 or self.height == 0:
-            return
-        rectangle = ''
-        for i in range(self.__height):
-            rectangle = '#' * self.__width + '\n'
-
-        return rectangle
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        return "\n".join(["#" * self.__width for _ in range(self.__height)])
