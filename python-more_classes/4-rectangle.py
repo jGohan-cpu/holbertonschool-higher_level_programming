@@ -1,32 +1,4 @@
 #!/usr/bin/python3
-<<<<<<< HEAD
-'''
-represents rectangle
-'''
-
-
-class Rectangle:
-    '''
-    width and height represented
-    '''
-
-    def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
-
-    @property
-    def width(self):
-        return self.width
-
-    @width.setter
-    
-    @property
-
-
-    @height.setter
-
-
-=======
 """
 This module defines a class Rectangle
 """
@@ -86,4 +58,32 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
->>>>>>> 8f4770e70db4e7736793bd80fb693257187476a7
+
+    def area(self):
+        """
+        Returns the area of the Rectangle.
+        """
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """
+        Returns the perimeter of the Rectangle.
+        Returns 0 if width or height is 0.
+        """
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        """
+        Returns a string
+        """
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        return "\n".join(["#" * self.__width for _ in range(self.__height)])
+
+    def __repr__(self):
+        """
+        return string representation
+        """
+        return "Rectangle({}, {})".format(self.__width, self.__height)
