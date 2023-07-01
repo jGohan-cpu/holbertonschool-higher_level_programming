@@ -1,26 +1,18 @@
 #!/usr/bin/python3
-'''
-add integers
-'''
+"""
+Zeroth exercise for doctest
+"""
 
 
 def add_integer(a, b=98):
     """
-    Adds two integers.
-
-    Args:
-        a (int or float): The first number.
-        b (int or float): The second number. Defaults to 98.
-
-    Returns:
-        int: The sum of a and b.
-
-    Raises:
-        TypeError: If a or b is not an integer or float.
+    If a and b aren't floats or integers,
+    this function raises TypeError.
+    Otherwise, it returns a + b.
     """
-    if not isinstance(a, (int, float)):
+    if type(a) != int and type(a) != float:
         raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)):
+    if type(b) != int and type(b) != float:
         raise TypeError("b must be an integer")
 
     return int(a) + int(b)
